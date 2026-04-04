@@ -1,0 +1,13 @@
+[Unit]
+Description=Short key list validator
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/root/short-key-list
+EnvironmentFile=/root/short-key-list/.env
+ExecStart=/usr/bin/env python3 scripts/run_pipeline.py
+NoNewPrivileges=true
+PrivateTmp=true
+UMask=0077

@@ -1,0 +1,11 @@
+[Unit]
+Description=Run short key list validator every 2 hours
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=2h
+Persistent=true
+Unit=short-key-list.service
+
+[Install]
+WantedBy=timers.target

@@ -1,1 +1,8 @@
 __pycache__/
+*.pyc
+.env
+.venv/
+artifacts/*.json
+artifacts/*.txt
+state/*
+!state/.gitkeep
